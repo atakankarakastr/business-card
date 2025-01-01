@@ -1,0 +1,95 @@
+:root {
+  --black: #000000ff;
+  --oxford-blue: #14213dff;
+  --orange-web: #fca311ff;
+  --platinum: #e5e5e5ff;
+  --white: #ffffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, var(--oxford-blue), var(--platinum));
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.business-card {
+  width: 300px;
+  margin: 50px auto;
+  padding: 1rem;
+  border: none;
+  background-color: var(--white);
+  box-shadow: 0 2px 5px var(--platinum);
+  border-radius: 16px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  transition: transform 0.3s ease;
+}
+
+.business-card:hover {
+  transform: translateY(-4px);
+}
+
+.profile-photo {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.business-card h1,
+.business-card h2,
+.business-card p {
+  color: var(--black);
+}
+
+.business-card h1,
+.business-card h2 {
+  font-family: "Merriweather", serif;
+}
+
+.business-card h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.business-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.business-card p {
+  font-size: 1rem;
+}
+
+.info {
+  text-align: left;
+}
+
+@media (max-width: 480px) {
+  .business-card {
+    width: 90%;
+    margin: 20px auto;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .profile-photo {
+    margin: 0 0 1rem 0;
+  }
+  .info {
+    text-align: center;
+  }
+}
